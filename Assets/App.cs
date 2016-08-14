@@ -41,6 +41,9 @@ public class App : MonoBehaviour
 			var cardObj = GameObject.Instantiate(CardPrefab);
 			cardObj.transform.SetParent (handObj.transform, false);
 			cardObj.GetComponent<CardObject>().Init(drawnCards[i]);
+
+            cardObj.SetActive(true);
 		}
+
 	}
 }

@@ -25,6 +25,7 @@ public class Card
 		str += Name + ",";
 		str += Desc + ",";
 		str += Power + ",";
+        str += Type + ",";
 
 		return str;
 	}
@@ -51,7 +52,7 @@ public class Deck
 		{
 			var card = new Card();
 
-			var cols = row.Split(',');
+			var cols = row.Split('|');
 			if (cols.Length < 7)
 				continue;
 

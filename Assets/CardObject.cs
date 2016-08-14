@@ -10,8 +10,10 @@ public class CardObject : MonoBehaviour
 
 	[SerializeField] Text CardName;
 	[SerializeField] Text CardDesc;
+    [SerializeField] Text CardPower;
+    [SerializeField] Text CardType;
 
-	public void Init(Card cardData)
+    public void Init(Card cardData)
 	{
 		CardData = cardData;
 
@@ -22,6 +24,7 @@ public class CardObject : MonoBehaviour
 	{
 		CardName.text = CardData.Name;
 		CardDesc.text = CardData.Desc;
-
-	}
+        CardPower.text = CardData.Power.ToString();
+        CardType.text = CardData.Type.ToString();
+    }
 }
